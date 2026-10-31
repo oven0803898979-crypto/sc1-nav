@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>นำทางอาคาร SC1</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>นำทางอาคาร SC1</h1>
+<section class="panel">
+  <div class="row">
+    <div><label for="from">ฉันอยู่ที่</label><input id="from" list="dl" value="ทางเข้าอาคาร" autocomplete="off"></div>
+    <div><label for="to">ต้องการไปที่</label><input id="to" list="dl" value="SC2050" autocomplete="off"></div>
+  </div>
+  <label style="display:flex;gap:8px;align-items:center;font-weight:400"><input type="checkbox" id="lo" style="width:20px;height:20px"> ใช้ลิฟต์เท่านั้น (ไม่ขึ้นบันได)</label>
+  <p id="msg" role="status">พิมพ์รหัสห้อง เช่น SC4035 หรือแตะห้องบนแผนที่เพื่อเลือกปลายทาง</p>
+</section>
+<datalist id="dl"></datalist>
+<div class="tabs" id="tabs" role="group" aria-label="เลือกชั้น"></div>
+<div class="map"><svg id="svg" viewBox="0 0 800 640" role="img" aria-label="แผนที่อาคาร SC1"></svg></div>
+<p class="sum" id="sum"></p>
+<div class="nav"><button id="prev">ก่อนหน้า</button><button id="next">ถัดไป</button></div>
+<ol id="steps"></ol>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
